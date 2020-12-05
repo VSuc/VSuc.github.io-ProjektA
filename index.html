@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap&subset=latin-ext" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="./styles.css">
+    </head>
+    <body onload="getCurrentWeather('Ostrava')">
+        <div id="name">
+            Weather
+        </div>
+        <div id="searchWrapper">
+            <input class="search" type="text" placeholder="Enter city name" id="searchCity">
+            <button class="search" id="searchButton">Search</button>
+        </div>
+        
+        <div id="currentWrapper">
+            <div id="currentCity"></div>
+            <div id="currentIconWrapper"><img id="currentIcon"></div>
+            <div id="currentDesc"></div>
+            <div id="currentTemp"></div>
+            <hr style="margin-bottom: 15px;">
+            <div class="row">
+                <div class="clc">Feels like:</div>
+                <div class="crc" id="currentFeelsLike">0</div>             
+            </div>
+            
+            <div class="row">
+                <div class="clc">Humidity:</div>
+                <div class="crc" id="currentHumidity">0</div>             
+            </div>
+            
+            <div class="row">
+                <div class="clc">Wind speed:</div>
+                <div class="crc" id="currentWind">0</div>             
+            </div>
+            
+            <div class="row">
+                <div class="clc">Sunrise:</div>
+                <div class="crc" id="currentSunrise">0</div>             
+            </div>
+            
+            <div class="row">
+                <div class="clc">Sunset:</div>
+                <div class="crc" id="currentSunset">0</div>             
+            </div>
+        </div>
+        
+        <div id="forecastWrapper">
+        
+            <div id="forecastRow">
+                <div class="forecastCol">
+                    <div id="f1day"></div>
+                    <img id="f1img">
+                    <div id="f1temp"></div>
+                </div>
+                
+                <div class="forecastCol">
+                    <div id="f2day"></div>
+                    <img id="f2img">
+                    <div id="f2temp"></div>
+                </div>
+                
+                <div class="forecastCol">
+                    <div id="f3day"></div>
+                    <img id="f3img">
+                    <div id="f3temp"></div>
+                </div>
+                
+                <div class="forecastCol">
+                    <div id="f4day"></div>
+                    <img id="f4img">
+                    <div id="f4temp"></div>
+                </div>
+                
+                <div class="forecastCol">
+                    <div id="f5day"></div>
+                    <img id="f5img">
+                    <div id="f5temp"></div>
+                </div>
+                            
+            </div>
+            
+        </div>
+        <canvas id="lineChart" height="400" width="500"></canvas>
+
+        <script src="./scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </body>
+</html>
